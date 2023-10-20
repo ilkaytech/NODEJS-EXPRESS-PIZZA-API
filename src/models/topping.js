@@ -16,7 +16,7 @@ const ToppingSchema = new mongoose.Schema(
     },
   },
   {
-    collection: "topping",
+    collection: "toppings",
     timestamps: true,
   }
 );
