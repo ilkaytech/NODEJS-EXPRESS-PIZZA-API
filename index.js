@@ -47,6 +47,8 @@ app.all("/", (req, res) => {
 
 // user:
 app.use("/users", require("./src/routes/user"));
+// topping:
+app.use("/toppings", require("./src/routes/topping"));
 
 /* --------------------------------------------- */
 
