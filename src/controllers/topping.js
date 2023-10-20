@@ -4,7 +4,7 @@
 ---------------------------------- */
 // Topping Controller:
 
-const Topping = require("../models/user");
+const Topping = require("../models/topping");
 
 module.exports = {
   list: async (req, res) => {

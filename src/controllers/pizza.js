@@ -4,7 +4,7 @@
 ---------------------------------- */
 // Pizza Controller:
 
-const Pizza = require("../models/user");
+const Pizza = require("../models/pizza");
 
 module.exports = {
   list: async (req, res) => {
