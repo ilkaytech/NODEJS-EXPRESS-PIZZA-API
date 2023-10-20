@@ -14,9 +14,23 @@ const PizzaSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    image: {
+      type: String,
+      trim: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    toppings: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Topping",
+      },
+    ],
   },
   {
-    collection: "toppings",
+    collection: "pizzas",
     timestamps: true,
   }
 );
