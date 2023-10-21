@@ -1,5 +1,4 @@
 "use strict";
-const { mongo } = require("mongoose");
 /* ----------------------
     NODEJS EXPRESS | PIZZA API
 ---------------------------------- */
