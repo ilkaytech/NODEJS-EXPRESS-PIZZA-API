@@ -2,10 +2,8 @@
 /* ----------------------
     NODEJS EXPRESS | PIZZA API
 ---------------------------------- */
-// Pizza Model:
-
 const { mongoose } = require("../configs/dbConnection");
-/* -------------------------------------------------------
+/* ------------------------------------------------------- *
 {
   "name": "Pizza Margarita",
   "price": 124.99,
@@ -16,6 +14,8 @@ const { mongoose } = require("../configs/dbConnection");
   ]
 }
 /* ------------------------------------------------------- */
+// Pizza Model:
+
 const PizzaSchema = new mongoose.Schema(
   {
     name: {
@@ -24,15 +24,19 @@ const PizzaSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+
     image: {
       type: String,
       trim: true,
     },
+
     price: {
       type: Number,
       required: true,
     },
+
     toppings: [
+      // push, pull
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Topping",

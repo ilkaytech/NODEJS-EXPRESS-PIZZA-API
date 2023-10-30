@@ -3,12 +3,16 @@
     NODEJS EXPRESS | PIZZA API
 ---------------------------------- */
 const { mongoose } = require("../configs/dbConnection");
+/* ------------------------------------------------------- *
+{
+    "name": "Sucuk"
+}
 /* ------------------------------------------------------- */
 // Topping Model:
 
 const ToppingSchema = new mongoose.Schema(
   {
-    name: {""
+    name: {
       type: String,
       trim: true,
       required: true,
