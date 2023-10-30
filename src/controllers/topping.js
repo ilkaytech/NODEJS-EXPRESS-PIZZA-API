@@ -18,7 +18,6 @@ module.exports = {
                     <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>
                     <li>URL/?<b>page=2&limit=1</b></li>
                 </ul>
-            `
         */
 
     const data = await res.getModelList(Topping);
@@ -34,7 +33,7 @@ module.exports = {
     /*
             #swagger.tags = ["Toppings"]
             #swagger.summary = "Create Topping"
-        */
+    */
 
     const data = await Topping.create(req.body);
 
@@ -48,7 +47,7 @@ module.exports = {
     /*
             #swagger.tags = ["Toppings"]
             #swagger.summary = "Get Single Topping"
-        */
+    */
 
     const data = await Topping.findOne({ _id: req.params.id });
 
@@ -62,9 +61,11 @@ module.exports = {
     /*
             #swagger.tags = ["Toppings"]
             #swagger.summary = "Update Topping"
-        */
+    */
 
-    const data = await Topping.updateOne({ _id: req.params.id }, req.body);
+    const data = await Topping.updateOne({ _id: req.params.id }, req.body, {
+      runValidators: true,
+    });
 
     res.status(202).send({
       error: false,
@@ -77,7 +78,7 @@ module.exports = {
     /*
             #swagger.tags = ["Toppings"]
             #swagger.summary = "Delete Topping"
-        */
+    */
 
     const data = await Topping.deleteOne({ _id: req.params.id });
 
