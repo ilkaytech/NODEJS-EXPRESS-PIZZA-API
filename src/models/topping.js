@@ -8,7 +8,7 @@ const { mongoose } = require("../configs/dbConnection");
 
 const ToppingSchema = new mongoose.Schema(
   {
-    name: {
+    name: {""
       type: String,
       trim: true,
       required: true,
